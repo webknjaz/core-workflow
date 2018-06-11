@@ -21,6 +21,7 @@ script:
 - blurb test
 
 #if: tag IS blank OR tag =~ ^blurb\-v\\d+\\.\\d+\\.\\d+$
+if: tag IS blank
 
 .mixtures:
 - &install-and-test-cherry-picker
