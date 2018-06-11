@@ -22,7 +22,7 @@ script:
 
 #if: tag IS blank OR tag =~ ^blurb\-v\\d+\\.\\d+\\.\\d+$
 #if: tag IS blank
-if: tag =~ ^cherry\-picker\-v\d+\.
+if: tag =~ ^cherry\-picker\-v\d+\.\d+\.\d+
 #\\d+\\.\\d+\\.\\d+$
 # should work in ruby: ^cherry-picker-v\d+\.\d+\.\d+$
 
