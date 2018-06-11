@@ -20,11 +20,13 @@ install:
 script:
 - blurb test
 
-if: tag =~ ^(blurb\-v\d+\.\d+\.\d+)?$
+if: tag IS blank or tag =~ ^blurb\-v\d+\.\d+\.\d+$
+#if: tag =~ ^blurb\-v\d+\.\d+\.\d+$ OR tag IS NOT present
 
 .mixtures:
 - &install-and-test-cherry-picker
-  if: (tag IS blank) OR tag =~ ^cherry\-picker\-v\d+\.\d+\.\d+$
+  #if: (tag IS blank) OR tag =~ ^cherry\-picker\-v\d+\.\d+\.\d+$
+  if: tag IS blank OR tag IS present
   install:
   - pushd cherry_picker
   - flit install
